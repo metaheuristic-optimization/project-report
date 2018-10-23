@@ -1,6 +1,6 @@
 \section{Data Investigation}
 
-For the data investigation task I took 3 files and ran 6 different configurations on each one of them. The tables below contain the results of 3 runs against each configuration.
+For the data investigation task, I took 3 files and ran 6 different configurations on each one of them. The tables below contain the results of 3 runs against each configuration.
 
 \subsection{Results for inst-0.tsp}
 For \textit{inst-0.tsp} file the below results have been collected with varying attributes.
@@ -160,8 +160,8 @@ Configuration                               & 1                & 2              
 \caption{\label{fig:inst-0-run-time}Average run time for inst-0.tsp file versus required configurations}
 \end{figure}
 
-The average run times shown in \ref{fig:inst-0-run-time} show that configuration 6 with a population size of 400 drastically increases the run time. This is not surprising as there is a lot more data to process.
-Increasing the mutation rate to 0.9 also affects the run time as can be seen from \ref{fig:inst-0-run-time} depicted in the \textit{mutation half} bar. Again this is not surprising as we will be mutating more often then we would have been with a mutation rate of 0.1 resulting in more processing.
+The average run times are shown in \ref{fig:inst-0-run-time} show that configuration 6 with a population size of 400 drastically increases the runtime. This is not surprising as there is a lot more data to process.
+Increasing the mutation rate to 0.9 also affects the runtime as can be seen from \ref{fig:inst-0-run-time} depicted in the \textit{mutation half} bar. Again this is not surprising as we will be mutating more often then we would have been with a mutation rate of 0.1 resulting in more processing.
 
 \begin{figure}[H]
 \vspace{-5pt}
@@ -170,7 +170,7 @@ Increasing the mutation rate to 0.9 also affects the run time as can be seen fro
 \caption{\label{fig:inst-0-average-best}Average best result for inst-0.tsp file versus required configurations}
 \end{figure}
 
-The best average results are show in \ref{fig:inst-0-average-best}. Configuration 2 performed well here without varying population size or mutation rate. However this does seem to vary wildly between configurations. Increasing the population seems to be uniform across each configuration excluding configuration 6. Interestingly decreasing the population to 100 seems to have reported the worst results across each configuration.
+The best average results are shown in \ref{fig:inst-0-average-best}. Configuration 2 performed well here without varying population size or mutation rate. However, this does seem to vary wildly between configurations. Increasing the population seems to be uniform across each configuration excluding configuration 6. Interestingly decreasing the population to 100 seems to have reported the worst results across each configuration.
 
 Configuration 6 which includes the best and second best selection method seems to perform terribly across each of the test files, and very rarely did it find results that were better than the initial best result, my best guess as to why this is, is that the population is not diverse enough as we are always selecting the best and second best candidates.
 
@@ -187,11 +187,11 @@ In figure \ref{fig:inst-0-best-improvements} I have charted the results of the b
 bestImprovement = ((initialBest - best) / initialBest) * 100
 \end{equation}
 
-As mentioned previously configuration 6 can be seen here to not be improving much at all over the initial best result. Increasing the population to 400 has been shown to be the best improvement over the initial best for configutation 5. The basic configuration without any variation seems to perform reasonably well across each configuration with the exception of configuration 6.
+As mentioned previously configuration 6 can be seen here to not be improving much at all over the initial best result. Increasing the population to 400 has been shown to be the best improvement over the initial best for configuration 5. The basic configuration without any variation seems to perform reasonably well across each configuration with the exception of configuration 6.
 
 \subsection{Results for inst-13.tsp}
 
-For \textit{inst-13.tsp} file the below results have been collected with varying attributes.
+For \textit{inst-13.tsp} file, the below results have been collected with varying attributes.
 
 \begin{itemize}
   \item Population size of 300
@@ -348,7 +348,7 @@ Configuration                               & 1                & 2              
 \caption{\label{fig:inst-13-run-time}Average run time for inst-13.tsp file versus required configurations}
 \end{figure}
 
-In figure \ref{fig:inst-13-run-time} the results again are as expected. Increasing the population size obviously increases the run time. It is worth noting that this file took significantly longer than inst-0.tsp and inst-16.tsp to process. Most likely this is down to this file being the largest dataset of the three.
+In figure \ref{fig:inst-13-run-time} the results again are as expected. Increasing the population size obviously increases the runtime. It is worth noting that this file took significantly longer than inst-0.tsp and inst-16.tsp to process. Most likely this is down to this file being the largest dataset of the three.
 
 \begin{figure}[H]
 \vspace{-5pt}
@@ -365,8 +365,6 @@ Figure \ref{fig:inst-13-average-best} shows the average best results. This graph
 \includegraphics[width=1.0\textwidth]{images/inst-13-best-improvements.png}
 \caption{\label{fig:inst-13-best-improvements}Average best improvements for inst-13.tsp file versus required configurations}
 \end{figure}
-
-
 
 \subsection{Results for inst-16.tsp}
 
@@ -527,7 +525,7 @@ Configuration                               & 1                & 2              
 \caption{\label{fig:inst-16-run-time}Average run time for inst-16.tsp file versus required configurations}
 \end{figure}
 
-As can be seen from the results in \ref{fig:inst-16-run-time} this file was the second largest file of the threeand the run times are in between inst-0.tsp and inst-13.tsp.
+As can be seen from the results in \ref{fig:inst-16-run-time} this file was the second largest file of the three and the run times are in between inst-0.tsp and inst-13.tsp.
 
 \begin{figure}[H]
 \vspace{-5pt}
@@ -545,7 +543,7 @@ As can be seen from the results in \ref{fig:inst-16-run-time} this file was the 
 
 \section{Summary}
 
-The final conclusion for the best operators is outlined in the table below
+The final conclusion for the best and worst operators is outlined in the table below
 
 \begin{table}[H]
 \resizebox{\textwidth}{!}{%
