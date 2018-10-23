@@ -153,7 +153,6 @@ Configuration                               & 1                & 2              
 }
 \end{table}
 
-
 \begin{figure}[H]
 \vspace{-5pt}
 \centering
@@ -184,7 +183,7 @@ Configuration 6 which includes the best and second best selection method seems t
 
 In figure \ref{fig:inst-0-best-improvements} I have charted the results of the best improvement over the initial best result. 
 
-\begin{equation}\label{eq:3sat-original-formula}
+\begin{equation}\label{eq:inst-0-best-improvement}
 bestImprovement = ((initialBest - best) / initialBest) * 100
 \end{equation}
 
@@ -342,6 +341,33 @@ Configuration                               & 1                & 2              
 }
 \end{table}
 
+\begin{figure}[H]
+\vspace{-5pt}
+\centering
+\includegraphics[width=1.0\textwidth]{images/inst-13-run-time.png}
+\caption{\label{fig:inst-13-run-time}Average run time for inst-13.tsp file versus required configurations}
+\end{figure}
+
+In figure \ref{fig:inst-13-run-time} the results again are as expected. Increasing the population size obviously increases the run time. It is worth noting that this file took significantly longer than inst-0.tsp and inst-16.tsp to process. Most likely this is down to this file being the largest dataset of the three.
+
+\begin{figure}[H]
+\vspace{-5pt}
+\centering
+\includegraphics[width=1.0\textwidth]{images/inst-13-average-best.png}
+\caption{\label{fig:inst-13-average-best}Average best results for inst-13.tsp file versus required configurations}
+\end{figure}
+
+Figure \ref{fig:inst-13-average-best} shows the average best results. This graph is more interesting than the inst-0.tsp results in that all of the variations except increasing the population size are similar across all configurations. Increasing the population size shows better results in configurations 2 and 5. 
+
+\begin{figure}[H]
+\vspace{-5pt}
+\centering
+\includegraphics[width=1.0\textwidth]{images/inst-13-best-improvements.png}
+\caption{\label{fig:inst-13-best-improvements}Average best improvements for inst-13.tsp file versus required configurations}
+\end{figure}
+
+
+
 \subsection{Results for inst-16.tsp}
 
 For \textit{inst-16.tsp} file the below results have been collected with varying attributes.
@@ -490,6 +516,46 @@ Configuration                               & 1                & 2              
 \cellcolor[HTML]{DAE8FC}Average Improvement & 5.51             & 5.13             & 6.96             & 8.21             & 4.68             & 0.38             \\
 \rowcolor[HTML]{CBCEFB} 
 \cellcolor[HTML]{DAE8FC}Median              & 102897783.645376 & 101608477.338846 & 101649100.720432 & 100790957.527907 & 103023056.16373  & 110343530.046084
+\end{tabular}%
+}
+\end{table}
+
+\begin{figure}[H]
+\vspace{-5pt}
+\centering
+\includegraphics[width=1.0\textwidth]{images/inst-16run-time.png}
+\caption{\label{fig:inst-16-run-time}Average run time for inst-16.tsp file versus required configurations}
+\end{figure}
+
+As can be seen from the results in \ref{fig:inst-16-run-time} this file was the second largest file of the threeand the run times are in between inst-0.tsp and inst-13.tsp.
+
+\begin{figure}[H]
+\vspace{-5pt}
+\centering
+\includegraphics[width=1.0\textwidth]{images/inst-16-average-best.png}
+\caption{\label{fig:inst-16-average-best}Average best results for inst-16.tsp file versus required configurations}
+\end{figure}
+
+\begin{figure}[H]
+\vspace{-5pt}
+\centering
+\includegraphics[width=1.0\textwidth]{images/inst-16-best-improvements.png}
+\caption{\label{fig:inst-16-best-improvements}Average best improvements for inst-16.tsp file versus required configurations}
+\end{figure}
+
+\section{Summary}
+
+The final conclusion for the best operators is outlined in the table below
+
+\begin{table}[H]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{
+>{\columncolor[HTML]{ECF4FF}}l lll}
+                    & \cellcolor[HTML]{ECF4FF}inst-0.tsp                                                                                                            & \cellcolor[HTML]{ECF4FF}inst-13.tsp                                                                                                                 & \cellcolor[HTML]{ECF4FF}inst-16.tsp                                                                                                                 \\
+Best Configuration  & \begin{tabular}[c]{@{}l@{}}Increasing mutation to 0.5\\ Configuration 2\\ Random selection\\ Cycle crossover\\ Scramble mutation\end{tabular} & \begin{tabular}[c]{@{}l@{}}Decrease population to 100\\ Configuration 5\\ Roulette wheel\\ Uniform crossover\\ Scramble mutation\end{tabular}       & \begin{tabular}[c]{@{}l@{}}Increase population to 400\\ Configuration 4\\ Roulette wheel\\ Cycle crossover\\ Reciprocal exchange\end{tabular}       \\
+Worst Configuration & \begin{tabular}[c]{@{}l@{}}Basic setup\\ Configuration 6\\ Best and second best\\ Uniform crossover\\ Scramble mutation\end{tabular}          & \begin{tabular}[c]{@{}l@{}}Decrease population to 100\\ Configuration 6\\ Best and second best\\ Uniform crossover\\ Scramble mutation\end{tabular} & \begin{tabular}[c]{@{}l@{}}Increasing mutation to 0.5\\ Configuration 6\\ Best and second best\\ Uniform crossover\\ Scramble mutation\end{tabular} \\
+Best result         & 21027147.65                                                                                                                                   & 21346365.09                                                                                                                                         & 95347503.1                                                                                                                                          \\
+Worst result        & 23001623.90                                                                                                                                   & 115089243.1                                                                                                                                         & 111530999.21                                                                                                                                       
 \end{tabular}%
 }
 \end{table}
